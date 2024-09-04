@@ -1,0 +1,26 @@
+public class Bird implements Animal {
+  private String featherColor;
+  private double wingspan;
+  private String beakType;
+
+  public Bird(String featherColor, double wingspan, String beakType) {
+      this.featherColor = featherColor;
+      this.wingspan = wingspan;
+      this.beakType = beakType;
+  }
+
+  @Override
+  public String makeSound() {
+      return "Chirp!";
+  }
+
+  @Override
+  public void move() {
+      System.out.println("Flying...");
+  }
+
+  @Override
+  public void feed() {
+      System.out.println("Eating worms...");
+  }
+}
