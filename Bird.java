@@ -24,3 +24,12 @@ public class Bird implements Animal {
       System.out.println("Eating worms...");
   }
 }
+
+class Main {
+  public static void main(String[] args) {
+      Bird bird = new Bird("Blue", 1.5, "Pointed");
+      System.out.println("Sound: " + bird.makeSound());
+      bird.move();
+      bird.feed();
+  }
+}
