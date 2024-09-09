@@ -19,7 +19,7 @@ public class TestaClasse {
 
         // Menu
         while (running) {
-            System.out.println("\n=== Menu de Teste ===");
+            System.out.println("=== Menu de Teste ===");
             System.out.println("1. Testar Bird");
             System.out.println("2. Testar Reptile");
             System.out.println("3. Testar Feline");
@@ -33,13 +33,20 @@ public class TestaClasse {
             System.out.println("0. Sair");
             System.out.print("Escolha uma opção: ");
 
+            // Verifica se a entrada número
+            while (!scanner.hasNextInt()) {
+              System.out.println("Entrada inválida. Por favor, digite um número.");
+              scanner.next();
+              System.out.print("Escolha uma opção: ");
+            }
+
             int choice = scanner.nextInt();
 
             switch (choice) {
                 case 1:
                     System.out.println("=== Testando Bird ===");
                     bird.feed();
-                    System.out.println("Sound: " + bird.makeSound());
+                    System.out.println("Som: " + bird.makeSound());
                     break;
                 case 2:
                     System.out.println("== Testando Reptile ===");
@@ -53,19 +60,23 @@ public class TestaClasse {
                     break;
                 case 4:
                     System.out.println("=== Testando TShirt ===");
+                    System.out.println("Preço: " + tshirt.calculatePrice());
                     System.out.println(tshirt.displayInfo());
                     break;
                 case 5:
                     System.out.println("=== Testando Sneaker ===");
                     System.out.println(sneaker.displayInfo());
+                    System.out.println(sneaker.getProductDetails());
                     break;
                 case 6:
                     System.out.println("=== Testando Motorcycle ===");
                     System.out.println(motorcycle.displayInfo());
+                    System.out.println("Price: " + motorcycle.calculatePrice());
                     break;
                 case 7:
                     System.out.println("=== Testando Car ===");
                     System.out.println(car.displayInfo());
+                    System.out.println("Price: " + car.calculatePrice());
 
                     break;
                 case 8:
@@ -85,7 +96,7 @@ public class TestaClasse {
                     break;
                 case 0:
                     System.out.println("Saindo...");
-                    running = false;  // Encerra o loop
+                    running = false;
                     break;
                 default:
                     System.out.println("Opção inválida! Tente novamente.");

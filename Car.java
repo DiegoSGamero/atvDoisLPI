@@ -11,7 +11,7 @@ public class Car implements Product {
 
   @Override
   public double calculatePrice() {
-      return 20000 + weight * 3; // Exemplo de cálculo de preço
+      return 20000 + weight * 3; 
   }
 
   @Override

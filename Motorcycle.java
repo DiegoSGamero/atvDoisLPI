@@ -11,7 +11,7 @@ public class Motorcycle implements Product {
 
   @Override
   public double calculatePrice() {
-      return 10000 + weight * 2; // Exemplo de cálculo de preço
+      return 10000 + weight * 2; 
   }
 
   @Override

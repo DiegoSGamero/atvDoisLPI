@@ -13,7 +13,7 @@ public class TShirt implements Product {
 
   @Override
   public double calculatePrice() {
-      return price * distance * 0.4;
+      return price * distance * 0.2;
   }
 
   @Override
