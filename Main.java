@@ -18,7 +18,7 @@ public class Main {
       feline.feed();
 
       // Instância de TShirt
-      TShirt tshirt = new TShirt("M", "Blue", 19.99);
+      TShirt tshirt = new TShirt("M", "Blue", 19.99, 150.55);
       System.out.println(tshirt.displayInfo());
       System.out.println(tshirt.getProductDetails());
 
