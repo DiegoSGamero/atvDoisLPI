@@ -1,43 +1,26 @@
-public class Sneaker implements Clothing {
-  private String brand;
-  private String soleType;
-  private double weight;
+public class Sneaker implements Product {
+  private String size;
+  private String color;
   private double price;
 
-  public Sneaker(String brand, String soleType, double weight, double price) {
-      this.brand = brand;
-      this.soleType = soleType;
-      this.weight = weight;
+  public Sneaker(String size, String color, double price) {
+      this.size = size;
+      this.color = color;
       this.price = price;
   }
 
   @Override
-  public void wear() {
-      System.out.println("Wearing sneakers...");
-  }
-
-  @Override
-  public void clean() {
-      System.out.println("Cleaning sneakers...");
-  }
-
-  @Override
-  public void repair() {
-      System.out.println("Repairing sneakers...");
-  }
-
-  @Override
-  public void applyDiscount(double discount) {
-      price -= discount;
+  public double calculatePrice() {
+      return price;
   }
 
   @Override
   public String displayInfo() {
-      return "Brand: " + brand + ", Sole Type: " + soleType + ", Weight: " + weight + " kg, Price: $" + price;
+      return "Sneaker: " + color + ", Size: " + size;
   }
 
   @Override
-  public double calculateShipping(double distance) {
-      return distance * 0.5; // Example shipping cost calculation
+  public String getProductDetails() {
+      return "Price: $" + price;
   }
 }

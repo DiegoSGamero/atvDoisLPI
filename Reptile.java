@@ -16,11 +16,23 @@ public class Reptile implements Animal {
 
   @Override
   public void move() {
-      System.out.println("Crawling...");
+      System.out.println("Slithering...");
   }
 
   @Override
   public void feed() {
       System.out.println("Eating insects...");
+  }
+
+  public String getSkinType() {
+      return skinType;
+  }
+
+  public double getBodyTemperature() {
+      return bodyTemperature;
+  }
+
+  public double getLength() {
+      return length;
   }
 }

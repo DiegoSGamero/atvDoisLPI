@@ -1,10 +1,10 @@
 public class Feline implements Animal {
-  private String species;
+  private String specie;
   private String furColor;
   private double maxSpeed;
 
   public Feline(String species, String furColor, double maxSpeed) {
-      this.species = species;
+      this.specie = specie;
       this.furColor = furColor;
       this.maxSpeed = maxSpeed;
   }
@@ -22,5 +22,17 @@ public class Feline implements Animal {
   @Override
   public void feed() {
       System.out.println("Eating meat...");
+  }
+
+  public String getSpecies() {
+      return specie;
+  }
+
+  public String getFurColor() {
+      return furColor;
+  }
+
+  public double getMaxSpeed() {
+      return maxSpeed;
   }
 }

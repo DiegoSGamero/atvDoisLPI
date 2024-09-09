@@ -1,26 +1,26 @@
-public class SavorySnack implements Food {
-  private String doughType;
-  private String filling;
-  private String size;
+public class SavorySnack implements Product {
+  private String name;
+  private String flavour;
+  private int calories;
 
-  public SavorySnack(String doughType, String filling, String size) {
-      this.doughType = doughType;
-      this.filling = filling;
-      this.size = size;
+  public SavorySnack(String name, String flavour, int calories) {
+      this.name = name;
+      this.flavour = flavour;
+      this.calories = calories;
   }
 
   @Override
-  public void prepare() {
-      System.out.println("Preparing savory snack...");
+  public double calculatePrice() {
+      return calories * 0.1; // Exemplo de cálculo de preço
   }
 
   @Override
-  public void serve() {
-      System.out.println("Serving savory snack...");
+  public String displayInfo() {
+      return "Savory Snack: " + name + ", Flavour: " + flavour;
   }
 
   @Override
-  public double calculateNutritionalValue() {
-      return 300.0; // Example nutritional value
+  public String getProductDetails() {
+      return "Calories: " + calories;
   }
 }

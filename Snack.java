@@ -1,26 +1,26 @@
-public class Snack implements Food {
-  private String flavor;
-  private String crunchiness;
-  private String packageSize;
+public class Snack implements Product {
+  private String name;
+  private String flavour;
+  private int calories;
 
-  public Snack(String flavor, String crunchiness, String packageSize) {
-      this.flavor = flavor;
-      this.crunchiness = crunchiness;
-      this.packageSize = packageSize;
+  public Snack(String name, String flavour, int calories) {
+      this.name = name;
+      this.flavour = flavour;
+      this.calories = calories;
   }
 
   @Override
-  public void prepare() {
-      System.out.println("Preparing snack...");
+  public double calculatePrice() {
+      return calories * 0.2; // Exemplo de cálculo de preço
   }
 
   @Override
-  public void serve() {
-      System.out.println("Serving snack...");
+  public String displayInfo() {
+      return "Snack: " + name + ", Flavour: " + flavour;
   }
 
   @Override
-  public double calculateNutritionalValue() {
-      return 150.0; // Example nutritional value
+  public String getProductDetails() {
+      return "Calories: " + calories;
   }
 }

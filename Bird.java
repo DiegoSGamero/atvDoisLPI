@@ -1,12 +1,12 @@
 public class Bird implements Animal {
-  private String featherColor;
-  private double wingspan;
-  private String beakType;
+  private String scientificName;
+  private double weight;
+  private String habitat;
 
-  public Bird(String featherColor, double wingspan, String beakType) {
-      this.featherColor = featherColor;
-      this.wingspan = wingspan;
-      this.beakType = beakType;
+  public Bird(String scientificName, double weight, String habitat) {
+      this.scientificName = scientificName;
+      this.weight = weight;
+      this.habitat = habitat;
   }
 
   @Override
@@ -23,13 +23,16 @@ public class Bird implements Animal {
   public void feed() {
       System.out.println("Eating worms...");
   }
-}
 
-class Main {
-  public static void main(String[] args) {
-      Bird bird = new Bird("Blue", 1.5, "Pointed");
-      System.out.println("Sound: " + bird.makeSound());
-      bird.move();
-      bird.feed();
+  public String getScientificName() {
+      return scientificName;
+  }
+
+  public double getWeight() {
+      return weight;
+  }
+
+  public String getHabitat() {
+      return habitat;
   }
 }

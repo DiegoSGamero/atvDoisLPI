@@ -1,9 +1,9 @@
-public class Motorcycle implements Product {
+public class Car implements Product {
   private String model;
   private String fuelType;
   private double weight;
 
-  public Motorcycle(String model, String fuelType, double weight) {
+  public Car(String model, String fuelType, double weight) {
       this.model = model;
       this.fuelType = fuelType;
       this.weight = weight;
@@ -11,12 +11,12 @@ public class Motorcycle implements Product {
 
   @Override
   public double calculatePrice() {
-      return 10000 + weight * 2; // Exemplo de cálculo de preço
+      return 20000 + weight * 3; // Exemplo de cálculo de preço
   }
 
   @Override
   public String displayInfo() {
-      return "Motorcycle Model: " + model + ", Fuel: " + fuelType;
+      return "Car Model: " + model + ", Fuel: " + fuelType;
   }
 
   @Override
