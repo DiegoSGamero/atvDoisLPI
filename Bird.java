@@ -28,11 +28,4 @@ public class Bird implements Animal {
       return scientificName;
   }
 
-  public double getWeight() {
-      return weight;
-  }
-
-  public String getHabitat() {
-      return habitat;
-  }
 }
